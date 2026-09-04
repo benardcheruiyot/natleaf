@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60">
+  <rect width="120" height="60" rx="8" fill="#fff" />
+  <rect x="10" y="12" width="100" height="36" rx="6" fill="#2bb673" opacity="0.95" />
+  <text x="60" y="36" font-size="14" font-family="Arial" fill="#fff" text-anchor="middle">CARD</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#EFF3F7"/>
+  <path d="M140 230C170 170 220 140 280 130C340 120 400 140 430 190C460 240 455 300 410 335C360 370 280 380 220 345C160 310 125 285 140 230Z" fill="#8DA8C6"/>
+  <path d="M260 125C276 105 304 95 330 102" stroke="#3A5B7B" stroke-width="16" stroke-linecap="round"/>
+  <text x="50%" y="86%" text-anchor="middle" fill="#243E56" font-size="34" font-family="Arial, sans-serif">Jet Fuel Gelato</text>
+</svg>

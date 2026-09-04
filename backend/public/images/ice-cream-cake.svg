@@ -1,0 +1,7 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#F7F4FB"/>
+  <path d="M160 180C170 130 220 100 280 100C340 100 390 130 400 180C410 230 375 280 310 300C245 320 180 280 160 180Z" fill="#E4C0E9"/>
+  <path d="M220 170C230 140 260 120 290 120C320 120 350 140 360 170" stroke="#B56CAF" stroke-width="24" stroke-linecap="round"/>
+  <path d="M204 210C214 190 234 178 258 178C282 178 302 190 312 210" stroke="#B56CAF" stroke-width="18" stroke-linecap="round"/>
+  <text x="50%" y="86%" text-anchor="middle" fill="#6F3A6C" font-size="36" font-family="Arial, sans-serif">Ice Cream Cake</text>
+</svg>

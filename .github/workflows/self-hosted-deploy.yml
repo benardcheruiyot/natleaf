@@ -1,0 +1,58 @@
+name: Self-hosted production deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+      concurrency:
+        group: production-deploy
+        cancel-in-progress: false
+      timeout-minutes: 30
+    environment: production
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Ensure deploy script is executable
+        shell: bash
+        run: chmod +x ./scripts/deploy-server.sh
+
+      - name: Deploy to InterServer
+        shell: bash
+        env:
+          SERVER_HOST: ${{ secrets.INTERSERVER_HOST }}
+          SSH_USER: ${{ secrets.INTERSERVER_USER }}
+          SSH_PORT: ${{ secrets.INTERSERVER_PORT || '22' }}
+          SSH_PRIVATE_KEY: ${{ secrets.INTERSERVER_PRIVATE_KEY }}
+          APP_DOMAIN: ${{ secrets.APP_DOMAIN || 'natuleaf.site' }}
+          CORS_ORIGIN: ${{ secrets.CORS_ORIGIN || 'https://natuleaf.site,https://www.natuleaf.site' }}
+          REMOTE_APP_DIR: ${{ secrets.REMOTE_APP_DIR || '/opt/natuleaf-storefront' }}
+          APP_PORT: '4101'
+          TELEGRAM_NOTIFICATIONS_ENABLED: ${{ secrets.TELEGRAM_NOTIFICATIONS_ENABLED || 'true' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$SERVER_HOST" ]; then
+            echo "INTERSERVER_HOST is not configured." >&2
+            exit 1
+          fi
+          ./scripts/deploy-server.sh "$SERVER_HOST"
+
+      - name: Smoke check
+        shell: bash
+        run: |
+          echo "Deployment finished for natuleaf.site. Verify HTTPS and app health after the runner finishes the process."

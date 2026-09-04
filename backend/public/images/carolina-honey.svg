@@ -1,0 +1,7 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#FFF8E5"/>
+  <circle cx="330" cy="240" r="100" fill="#F6C85F"/>
+  <path d="M134 292C154 230 196 188 252 170C308 152 358 160 401 188C447 217 466 267 454 320C442 373 391 397 340 385C288 373 244 335 210 288C180 247 148 267 134 292Z" fill="#DEB64F"/>
+  <path d="M231 108C250 86 284 88 303 110" stroke="#934A12" stroke-width="18" stroke-linecap="round"/>
+  <text x="50%" y="84%" text-anchor="middle" fill="#5A3E1D" font-size="36" font-family="Arial, sans-serif">Carolina Honey</text>
+</svg>

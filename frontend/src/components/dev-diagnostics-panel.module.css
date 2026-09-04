@@ -1,0 +1,99 @@
+.panel {
+  position: fixed;
+  left: 0.8rem;
+  top: 0.8rem;
+  z-index: 1200;
+  width: auto;
+  max-width: min(420px, calc(100vw - 1.6rem));
+  background: transparent;
+  color: #f9fafb;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+.open {
+  width: min(420px, calc(100vw - 1.6rem));
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.35);
+}
+
+.toggleButton {
+  width: auto;
+  border: 0;
+  background: rgba(17, 24, 39, 0.95);
+  color: #f9fafb;
+  padding: 0.48rem 0.8rem;
+  text-align: left;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.open .toggleButton {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.body {
+  padding: 0.55rem 0.6rem 0.6rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.refreshButton {
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.28rem 0.45rem;
+  cursor: pointer;
+}
+
+.stateText,
+.errorText {
+  margin: 0.35rem 0;
+}
+
+.errorText {
+  color: #fecaca;
+}
+
+.logList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+  background: rgba(2, 6, 23, 0.65);
+}
+
+.logItem {
+  padding: 0.35rem 0.45rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.logItem:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    top: auto;
+    bottom: 0.8rem;
+  }
+}

@@ -1,0 +1,7 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#111827"/>
+  <path d="M160 240C180 200 220 170 270 155C320 140 370 150 410 180C450 210 470 260 455 310C440 360 395 380 345 370C295 360 250 330 215 290C185 255 160 265 160 240Z" fill="#4B5563"/>
+  <circle cx="380" cy="110" r="24" fill="#FBBF24"/>
+  <circle cx="420" cy="120" r="12" fill="#F59E0B"/>
+  <text x="50%" y="86%" text-anchor="middle" fill="#E5E7EB" font-size="34" font-family="Arial, sans-serif">Midnight Hotel</text>
+</svg>

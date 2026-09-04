@@ -1,0 +1,16 @@
+{
+  "name": "greenstone-clone",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm start",
+    "sync:products": "node scripts/sync-products-from-source.mjs",
+    "sync:products:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run-nightly-sync.ps1",
+    "sync:products:nightly:install": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-nightly-sync-task.ps1",
+    "sync:products:nightly:uninstall": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/uninstall-nightly-sync-task.ps1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

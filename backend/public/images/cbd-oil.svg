@@ -1,0 +1,7 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#F4F9F8"/>
+  <path d="M330 280C380 275 430 255 455 210C482 160 465 102 420 80C378 58 318 68 290 100C270 120 255 145 242 175C230 205 210 235 180 245C150 255 120 245 100 220C70 185 90 135 130 115C165 100 205 98 240 115C268 129 292 154 315 180C338 206 345 245 330 280Z" fill="#A6D4C5"/>
+  <rect x="250" y="90" width="90" height="140" rx="24" fill="#2B6F58"/>
+  <rect x="280" y="40" width="30" height="80" rx="14" fill="#1B4C3E"/>
+  <text x="50%" y="85%" text-anchor="middle" fill="#1B4C3E" font-size="36" font-family="Arial, sans-serif">CBD Oil</text>
+</svg>

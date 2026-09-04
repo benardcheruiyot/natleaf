@@ -1,0 +1,54 @@
+name: Manual Deploy to InterServer
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+
+jobs:
+  prepare-deployment:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-url: ${{ steps.artifact.outputs.url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          cd frontend && npm ci
+          cd ../backend && npm ci
+
+      - name: Build frontend
+        run: cd frontend && npm run build
+
+      - name: Create deployment bundle
+        run: |
+          tar --exclude=node_modules --exclude=.git --exclude=.env -czf natuleaf-${{ github.sha }}.tar.gz .
+          ls -lh natuleaf-${{ github.sha }}.tar.gz
+
+      - name: Display deployment instructions
+        run: |
+          echo "# Deployment Ready"
+          echo "Bundle: natuleaf-${{ github.sha }}.tar.gz"
+          echo "Commit: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref }}"
+          echo ""
+          echo "## Manual Deployment Steps:"
+          echo "1. Download the built code from your workspace"
+          echo "2. Run locally: SSH_USER=root INTERSERVER_HOST=153.75.247.188 ./scripts/deploy-server.sh"
+          echo "3. Or deploy to InterServer via SCP/SSH from your trusted machine"

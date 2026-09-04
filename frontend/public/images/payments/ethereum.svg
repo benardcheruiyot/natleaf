@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60">
+  <rect width="120" height="60" rx="8" fill="#fff" />
+  <polygon points="30,12 42,30 30,48 18,30" fill="#3c3c3d" />
+  <text x="86" y="36" font-size="14" font-family="Arial" fill="#1a1a1a" text-anchor="middle">ETH</text>
+</svg>

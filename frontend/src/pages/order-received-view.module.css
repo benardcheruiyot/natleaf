@@ -1,0 +1,160 @@
+.wrap {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.received {
+  margin: 0;
+  color: #15803d;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.metaList {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  border: 1px solid #e4eee3;
+  border-radius: 20px;
+  background: #f4f9f3;
+}
+
+.metaList li {
+  margin: 0;
+  color: #555;
+  font-size: 0.92rem;
+  border-right: 1px solid #ececec;
+  padding-right: 0.65rem;
+}
+
+.metaList li:last-child {
+  border-right: 0;
+}
+
+.paymentHint {
+  margin: 0.95rem 0 0;
+  color: #5f6470;
+  font-size: 0.88rem;
+}
+
+.detailsSection {
+  margin-top: 1.35rem;
+}
+
+.detailsSection h2,
+.billingSection h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.42rem;
+  color: #111;
+}
+
+.detailsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.detailsTable th,
+.detailsTable td {
+  border-bottom: 1px solid #ececec;
+  padding: 0.72rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.detailsTable thead th {
+  font-weight: 700;
+  color: #222;
+}
+
+.detailsTable td:last-child,
+.detailsTable th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.detailsTable a {
+  color: #333;
+  text-decoration: none;
+}
+
+.detailsTable a:hover,
+.detailsTable a:focus-visible {
+  text-decoration: underline;
+}
+
+.detailsTable tfoot th {
+  font-weight: 600;
+}
+
+.billingSection {
+  margin-top: 1.25rem;
+}
+
+.billingSection address {
+  margin: 0;
+  font-style: normal;
+  color: #444;
+}
+
+.billingSection p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.missingOrder {
+  border: 1px solid #ececec;
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
+
+.missingOrder h2 {
+  margin: 0 0 0.4rem;
+  color: #111;
+  font-size: 1.25rem;
+}
+
+.missingOrder p {
+  margin: 0;
+  color: #555;
+}
+
+.returnLink {
+  display: inline-flex;
+  margin-top: 0.7rem;
+  text-decoration: none;
+  border: 1px solid #3bb54a;
+  background: #3bb54a;
+  color: #fff;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 980px) {
+  .metaList {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metaList li {
+    border-right: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .metaList {
+    grid-template-columns: 1fr;
+  }
+}

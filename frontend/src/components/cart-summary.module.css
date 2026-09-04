@@ -1,0 +1,251 @@
+.cartSummary {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.85rem;
+}
+
+.headerRow h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.clearButton {
+  background: #fff;
+  color: #666;
+  border: 1px solid #d5d5d5;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.empty {
+  color: #374151;
+  font-size: 0.96rem;
+}
+
+.returnShopLink {
+  display: inline-flex;
+  margin-top: 0.8rem;
+  text-decoration: none;
+  border: 1px solid #3bb54a;
+  background: #3bb54a;
+  color: #fff;
+  padding: 0.56rem 0.9rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cartTableWrap {
+  overflow-x: auto;
+}
+
+.cartTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  color: #3b3b3b;
+  min-width: 0;
+}
+
+.cartTable th,
+.cartTable td {
+  border: 0;
+  min-width: 0;
+  border-bottom: 1px solid #ececec;
+  padding: 0.85rem 0.25rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cartTable thead th {
+  background: transparent;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+.cartTable th:nth-child(2),
+.cartTable td:nth-child(2),
+.cartTable th:nth-child(1),
+.cartTable td:nth-child(1),
+.cartTable th:nth-child(4),
+.cartTable td:nth-child(4),
+.cartTable th:nth-child(6),
+.cartTable td:nth-child(6) {
+  text-align: right;
+}
+
+.cartTable th:nth-child(5),
+.cartTable td:nth-child(5) {
+  text-align: center;
+}
+
+.itemTitle {
+  font-weight: 600;
+  color: #222;
+}
+
+.productThumb {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border: 1px solid #ebebeb;
+  display: block;
+}
+
+.thumbPlaceholder {
+  width: 46px;
+  height: 46px;
+  border: 1px dashed #d1d5db;
+  background: #f9fafb;
+}
+
+.removeIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #8a8a8a;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.quantityControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.quantityButton {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  border-radius: 4px;
+  color: #222;
+  cursor: pointer;
+}
+
+.quantityValue {
+  min-width: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.removeButton {
+  background: transparent;
+  color: #b91c1c;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.couponRow {
+  padding: 0.6rem;
+  text-align: left !important;
+}
+
+.couponInput {
+  border: 1px solid #d2d6dc;
+  min-width: 210px;
+  padding: 0.62rem 0.7rem;
+  margin-right: 0.5rem;
+  height: 40px;
+}
+
+.couponButton {
+  border: 1px solid #d4d4d4;
+  background: #f7f7f7;
+  color: #555;
+  padding: 0.58rem 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cartTotals {
+  width: min(360px, 100%);
+  margin: 1rem 0 0 auto;
+  border: 1px solid #ebeaea;
+  padding: 1rem;
+}
+
+.cartTotals h4 {
+  margin: 0 0 0.7rem;
+  font-size: 1.72rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  border-top: 1px solid #ececec;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.totalRow strong {
+  font-size: 1rem;
+}
+
+.checkoutButton {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: #3bb54a;
+  color: #fff;
+  border: 1px solid #33a341;
+  padding: 12.8px 0;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkoutMessage {
+  margin-top: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .headerRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .headerRow h3 {
+    font-size: 1.5rem;
+  }
+
+  .cartTotals {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .couponInput {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

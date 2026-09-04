@@ -1,0 +1,8 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#F7FCF7"/>
+  <circle cx="240" cy="210" r="80" fill="#F87171"/>
+  <circle cx="360" cy="240" r="80" fill="#F87171"/>
+  <circle cx="300" cy="150" r="80" fill="#F87171"/>
+  <path d="M200 240C210 260 230 275 255 280C280 285 305 282 328 272C351 262 370 245 380 220" stroke="#9A3412" stroke-width="14" stroke-linecap="round"/>
+  <text x="50%" y="88%" text-anchor="middle" fill="#1E3A8A" font-size="34" font-family="Arial, sans-serif">Watermelon Gummies</text>
+</svg>

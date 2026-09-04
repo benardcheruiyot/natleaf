@@ -1,0 +1,7 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#F0F9F4"/>
+  <circle cx="150" cy="220" r="90" fill="#7BC287" opacity="0.85"/>
+  <circle cx="420" cy="180" r="110" fill="#4A8C5D" opacity="0.9"/>
+  <path d="M120 240C140 200 180 160 230 145C280 130 335 140 380 170C430 200 450 245 440 295C430 345 385 370 335 360C285 350 230 315 200 270C175 235 145 255 120 240Z" fill="#A7E3B8"/>
+  <text x="50%" y="82%" text-anchor="middle" fill="#114F2E" font-size="36" font-family="Arial, sans-serif">Blue Dream</text>
+</svg>

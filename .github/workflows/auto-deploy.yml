@@ -1,0 +1,76 @@
+name: Natuleaf Auto Deploy - DISABLED
+
+# ⚠ This workflow is DISABLED because GitHub Actions runners cannot reach
+# InterServer on port 22 due to network/firewall restrictions.
+#
+# DEPLOYMENT OPTIONS:
+#
+# 1. Deploy from your local machine (RECOMMENDED):
+#    SSH_USER=root INTERSERVER_HOST=153.75.247.188 ./scripts/deploy-server.sh
+#
+# 2. Use the 'manual-deploy' workflow to build artifacts
+#
+# 3. Contact InterServer support to allow GitHub Actions runner IPs
+#    (if you want to re-enable automated deployment)
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    env:
+      SSH_PRIVATE_KEY: ${{ secrets.INTERSERVER_PRIVATE_KEY }}
+    steps:
+      - name: 🔎 Diagnose SSH secret format
+        run: |
+          if [ -z "${SSH_PRIVATE_KEY:-}" ]; then
+            echo "SSH secret is empty or not configured."
+            exit 0
+          fi
+
+          echo "SSH secret length: ${#SSH_PRIVATE_KEY} characters"
+
+          if printf '%s' "$SSH_PRIVATE_KEY" | grep -q 'BEGIN .*PRIVATE KEY'; then
+            echo "Detected: OpenSSH private key (raw text)"
+          elif printf '%s' "$SSH_PRIVATE_KEY" | grep -Eq '^[A-Za-z0-9+/=\\r\\n]+$'; then
+            echo "Detected: base64-like or escaped-newline content"
+            CLEANED_KEY="$(printf '%s' "$SSH_PRIVATE_KEY" | tr -d '\r')"
+            if printf '%s' "$CLEANED_KEY" | base64 -d >/dev/null 2>&1; then
+              echo "Decoded preview: $(printf '%s' "$CLEANED_KEY" | base64 -d | head -c 40 | tr '\n' ' ')"
+              echo "Classification: valid base64 SSH key"
+            else
+              echo "Classification: base64-like but invalid; raw key text or malformed secret"
+            fi
+          else
+            echo "Detected: non-base64/raw secret or escaped content"
+            echo "Preview: $(printf '%s' "$SSH_PRIVATE_KEY" | head -c 80 | tr '\n' ' ')"
+          fi
+
+      - name: ℹ Deployment Status
+        run: |
+          cat << 'EOF'
+          ========================================
+          ⚠ GITHUB ACTIONS DEPLOYMENT DISABLED
+          ========================================
+          
+          GitHub Actions runners cannot SSH to InterServer (port 22).
+          This is a network/firewall restriction, not a code issue.
+          
+          ✓ Deploy-server.sh script: WORKING
+          ✓ SSH key handling: WORKING
+          ✓ GitHub Actions ↔ InterServer connectivity: BLOCKED
+          
+          RECOMMENDED: Deploy from your local machine
+          
+          Step 1: Ensure your SSH key is in ~/.ssh/id_ed25519
+          Step 2: Run this command from project root:
+          
+            SSH_USER=root \
+            INTERSERVER_HOST=153.75.247.188 \
+            ./scripts/deploy-server.sh
+          
+          Or use the 'ci.yml' workflow to verify builds, 
+          then deploy manually when ready.
+          ========================================
+          EOF

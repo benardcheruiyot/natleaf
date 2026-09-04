@@ -1,0 +1,6 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#F8F0FF"/>
+  <path d="M180 220C200 180 240 155 290 148C340 141 390 155 415 190C440 225 430 270 395 295C360 320 310 330 260 320C210 310 175 270 180 220Z" fill="#C084FC"/>
+  <path d="M228 160C252 138 292 132 320 148" stroke="#7C3AED" stroke-width="16" stroke-linecap="round"/>
+  <text x="50%" y="86%" text-anchor="middle" fill="#581C87" font-size="34" font-family="Arial, sans-serif">Purple Rose</text>
+</svg>

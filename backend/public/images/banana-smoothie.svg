@@ -1,0 +1,6 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="32" fill="#FFF8E3"/>
+  <path d="M180 120C210 90 250 80 292 90C334 100 370 130 385 170C400 210 390 255 360 280C330 305 290 320 250 315C210 310 178 285 160 250C142 215 150 160 180 120Z" fill="#F8E17A"/>
+  <path d="M246 90C262 68 290 58 318 66" stroke="#A46C09" stroke-width="16" stroke-linecap="round"/>
+  <text x="50%" y="86%" text-anchor="middle" fill="#7B4C07" font-size="36" font-family="Arial, sans-serif">Banana Smoothie</text>
+</svg>

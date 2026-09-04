@@ -1,0 +1,60 @@
+name: Natuleaf CI/CD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            frontend/package-lock.json
+            backend/package-lock.json
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm ci
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Validate PM2 config
+        run: |
+          node -e "const cfg = require('./backend/ecosystem.config.js'); if (!cfg.apps || !cfg.apps[0] || !cfg.apps[0].name) throw new Error('PM2 app name missing'); console.log('PM2 app OK:', cfg.apps[0].name);"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: natuleaf-build
+          path: frontend/dist

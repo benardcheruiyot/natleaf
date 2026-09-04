@@ -1,0 +1,474 @@
+.checkoutPage {
+  padding: 1.25rem;
+  background: transparent;
+  width: 100%;
+}
+
+.headerRow {
+  margin-bottom: 0.6rem;
+}
+.headerRow h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #12261a;
+}
+.checkoutIntro {
+  margin: 0.25rem 0 0;
+  color: #4b5563;
+}
+
+.checkoutSteps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  color: #444;
+  font-size: 17px;
+  border-bottom: 0;
+}
+
+.checkoutSteps li {
+  display: block;
+  padding: 0;
+  font-weight: 400;
+}
+
+.stepActive {
+  color: #444;
+}
+
+.checkoutGrid {
+  display: block;
+}
+
+.checkoutSteps a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(410px, 40.5%);
+  gap: normal;
+  align-items: start;
+  width: 100%;
+}
+
+.addressColumn,
+.orderColumn {
+  min-width: 0;
+}
+
+.addressColumn h3,
+.orderColumn h3 {
+  margin: 0 0 0.95rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.additionalHeading {
+  margin-top: 1.25rem !important;
+}
+
+.fieldRow {
+  margin: 0 0 0.82rem;
+}
+
+.fieldRow label {
+  display: block;
+  margin: 0 0 0.34rem;
+  color: #111;
+  font-size: 0.875rem;
+}
+
+.form .addressColumn input,
+.form .addressColumn select,
+.form .addressColumn textarea {
+  width: 100%;
+  padding: 0 11.2px !important;
+  height: 44px;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  background: #fff;
+  color: #222;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form .addressColumn input:focus,
+.form .addressColumn select:focus,
+.form .addressColumn textarea:focus {
+  outline: none;
+  border-color: #34d399 !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.16);
+}
+
+.form .addressColumn textarea {
+  min-height: 0;
+  padding: 0.65rem 11.2px !important;
+  height: auto;
+  resize: vertical;
+}
+
+.orderBox {
+  border: 0;
+  background: #fff;
+  padding: 0;
+}
+
+.summarySticky {
+  position: relative;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.summaryActions {
+  margin-top: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
+  color: #fff;
+  border: 0;
+  padding: 0 17px;
+  height: 54px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.22);
+}
+
+.submitButton:disabled,
+.submitButton[disabled] {
+  opacity: 0.72;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  color: #3b3b3b;
+}
+
+.orderTable th,
+.orderTable td {
+  border: 0;
+  border-bottom: 1px solid #ececec;
+  padding: 11.9px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.orderTable thead th {
+  font-weight: 700;
+  padding: 21.2px 0;
+}
+
+.productRow td {
+  padding-bottom: 30px;
+}
+
+.orderProductCell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.orderProductCell img {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border: 1px solid #ededed;
+  flex: 0 0 auto;
+}
+
+.orderTable td:last-child,
+.orderTable th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.orderTable tfoot th {
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+.orderTable tfoot td {
+  padding: 15px 20px;
+}
+
+.orderGrandTotal {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.paymentMethods {
+  list-style: none;
+  margin: 0;
+  padding: 0.95rem 0 0;
+}
+
+.paymentMethods li {
+  border-bottom: 1px solid #ececec;
+  padding: 6px 0 12px;
+}
+
+.paymentMethods li:hover .paymentLabel {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.paymentMethods li:last-child {
+  border-bottom: 0;
+}
+
+.paymentLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  color: #111;
+  font-size: 0.92rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  transition: background 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  border: 1px solid transparent;
+}
+
+.paymentLabel:hover {
+  background: #f8fafc;
+  border-color: #e5e7eb;
+}
+
+.paymentLabel:has(input:checked) {
+  background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+  border-color: #86efac;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.12);
+}
+
+.paymentLabel input {
+  width: auto;
+  margin: 0;
+}
+
+.paymentText {
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.paymentLogo {
+  width: auto;
+  max-height: 24px;
+  max-width: 76px;
+  object-fit: contain;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  color: #111827;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.paymentLabel:has(input:checked) .paymentLogo {
+  border-color: #86efac;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.16);
+}
+
+.paymentHint {
+  margin: 0.5rem 0 0;
+  color: #5f6470;
+  font-size: 0.84rem;
+}
+
+.cardFields {
+  border-top: 1px solid #ececec;
+  margin-top: 0.6rem;
+  padding-top: 0.9rem;
+}
+
+.cardHeading {
+  margin: 0 0 0.45rem;
+  color: #222;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.cardFields label {
+  display: block;
+  margin: 0 0 0.35rem;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.cardFields input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d2d6dc;
+  border-radius: 4px;
+  padding: 0 11.2px;
+}
+
+.formError {
+  margin: 0.9rem 0 0.45rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #fca5a5;
+  background: #fff1f2;
+  color: #991b1b;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* small helper for aria-live region when needed */
+.ariaLive {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: #3bb54a;
+  color: #fff;
+  border: 1px solid #33a341;
+  padding: 0 17px;
+  height: 52px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  transition: none;
+}
+
+.socialProof {
+  margin-top: 1.2rem;
+  border-top: 1px solid #ececec;
+  padding-top: 0.85rem;
+}
+
+.socialProof h4 {
+  margin: 0 0 0.35rem;
+  color: #222;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.socialProof p {
+  margin: 0;
+  color: #545b67;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.emptyCheckout {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.emptyCheckout p {
+  margin: 0;
+  color: #374151;
+}
+
+.submitButton:disabled,
+.addressColumn input:disabled,
+.addressColumn select:disabled,
+.addressColumn textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.couponPrompt {
+  margin: 1rem 0 0;
+  color: #565d68;
+  font-size: 0.9rem;
+}
+
+.couponPrompt button {
+  border: 0;
+  background: transparent;
+  color: #2d6b9f;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  cursor: pointer;
+}
+
+.cardRevealButton {
+  padding: 0.5rem 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #d2d6dc;
+  border-radius: 4px;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.cardRevealButton:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.cardRevealButton:active:not(:disabled) {
+  background: #d1d5db;
+}
+
+.cardRevealButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .form {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .checkoutSteps {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .checkoutSteps li {
+    padding-bottom: 0;
+  }
+
+  .orderBox {
+    padding: 0;
+  }
+}
