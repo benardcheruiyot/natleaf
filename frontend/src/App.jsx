@@ -308,6 +308,14 @@ export default function App() {
             >
               Checkout
             </button>
+            <a
+              href="https://wa.me/16464813387?text=Hi%2C%20I%20need%20help%20with%20my%20order"
+              className="topbarLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
 
