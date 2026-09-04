@@ -428,7 +428,7 @@
                       "height": 5990
                     },
                     "snippet": "<div class=\"app\">",
-                    "nodeLabel": "+1 (940) 882-0131\nMenu\nMENU\nYour Cart\n\nNo products in the cart.\n\nFlowers\nToggle…"
+                    "nodeLabel": "\nMenu\nMENU\nYour Cart\n\nNo products in the cart.\n\nFlowers\nToggle…"
                   }
                 }
               ]
@@ -439,7 +439,7 @@
               "type": "node",
               "lhId": "1-2-BUTTON",
               "path": "1,HTML,1,BODY,2,DIV,0,DIV,3,DIV,0,BUTTON",
-              "selector": "div#root > div.app > div.joinChatReplica > button.joinChatButton",
+              "selector": "div#root > div.app > div.legacyContact > button.legacyContactButton",
               "boundingRect": {
                 "top": 698,
                 "bottom": 739,
@@ -448,7 +448,7 @@
                 "width": 151,
                 "height": 41
               },
-              "snippet": "<button type=\"button\" class=\"joinChatButton\" aria-label=\"Open Chat\">",
+              "snippet": "<button type=\"button\" class=\"legacyContactButton\" aria-label=\"Open Chat\">",
               "nodeLabel": "Open Chat\nOnline",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.61 (foreground color: #ffffff, background color: #2bb673, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1"
             }
@@ -1022,7 +1022,7 @@
               "type": "node",
               "lhId": "1-2-BUTTON",
               "path": "1,HTML,1,BODY,2,DIV,0,DIV,3,DIV,0,BUTTON",
-              "selector": "div#root > div.app > div.joinChatReplica > button.joinChatButton",
+              "selector": "div#root > div.app > div.legacyContact > button.legacyContactButton",
               "boundingRect": {
                 "top": 698,
                 "bottom": 739,
@@ -1031,7 +1031,7 @@
                 "width": 151,
                 "height": 41
               },
-              "snippet": "<button type=\"button\" class=\"joinChatButton\" aria-label=\"Open Chat\">",
+              "snippet": "<button type=\"button\" class=\"legacyContactButton\" aria-label=\"Open Chat\">",
               "nodeLabel": "Open Chat\nOnline",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
