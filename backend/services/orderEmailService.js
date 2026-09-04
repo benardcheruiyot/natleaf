@@ -115,7 +115,7 @@ function createCardPaymentEmail(order) {
           <p style="margin:0 0 12px;">Hi ${escapeHtml(order.customer.firstName || 'there')},</p>
           <p style="margin:0 0 10px;">The following note has been added to your order:</p>
           <blockquote style="margin:0 0 16px;padding:8px 12px;border-left:3px solid #dadada;color:#555;">
-            Card Payment Failed, Kindly text/call us on +1 (251) 337-9407 for alternative payment methods
+            Card Payment Failed, Kindly text/call us on +1 (646) 481-3387 for alternative payment methods
           </blockquote>
           <p style="margin:0 0 14px;">As a reminder, here are your order details:</p>
 
@@ -203,7 +203,7 @@ function createCardPaymentUnsuccessfulEmail(order) {
             </tbody>
           </table>
 
-          <p style="margin:0 0 10px;">Card Payment Failed, Kindly text/call us on +1 (251) 337-9407 for alternative payment methods</p>
+          <p style="margin:0 0 10px;">Card Payment Failed, Kindly text/call us on +1 (646) 481-3387 for alternative payment methods</p>
 
           <h2 style="margin:0 0 12px;color:#2bb673;font-size:22px;">[Order #${escapeHtml(order.orderNumber)}] (${formatOrderDate(order.createdAt)})</h2>
 

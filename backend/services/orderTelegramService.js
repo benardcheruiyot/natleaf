@@ -142,7 +142,7 @@ function createCardPaymentSellerMessage(order) {
     '',
     '<b>Recommended Action</b>',
     'Text/call the buyer and guide them to complete payment using an alternative method.',
-    'Card Payment Failed, Kindly text/call us on +1 (251) 337-9407 for alternative payment methods',
+    'Card Payment Failed, Kindly text/call us on +1 (646) 481-3387 for alternative payment methods',
   ]
 
   return lines.filter(Boolean).join('\n')
