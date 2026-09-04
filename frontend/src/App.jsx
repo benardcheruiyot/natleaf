@@ -296,10 +296,6 @@ export default function App() {
         </div>
 
         <div className="topbar">
-          <span className="topbarLabel">CALL/TEXT</span>
-          <a href="tel:+12513379407" className="topbarLink">
-            +1 (251) 337-9407
-          </a>
           <div className="topbarLinks">
             <button
               type="button"

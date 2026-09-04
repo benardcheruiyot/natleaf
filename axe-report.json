@@ -4611,9 +4611,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a href=\"tel:+19408820131\" class=\"topbarLink\">+1 (940) 882-0131</a>",
+            "html": "<a href=\"\" class=\"topbarLink\"></a>",
             "target": [
-              "a[href=\"tel:+19408820131\"]"
+              "a[href=\"\"]"
             ]
           },
           {
@@ -8523,9 +8523,9 @@
               }
             ],
             "impact": null,
-            "html": "<a href=\"tel:+19408820131\" class=\"topbarLink\">+1 (940) 882-0131</a>",
+            "html": "<a href=\"\" class=\"topbarLink\"></a>",
             "target": [
-              "a[href=\"tel:+19408820131\"]"
+              "a[href=\"\"]"
             ]
           },
           {
@@ -10150,9 +10150,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a href=\"tel:+19408820131\" class=\"topbarLink\">+1 (940) 882-0131</a>",
+            "html": "<a href=\"\" class=\"topbarLink\"></a>",
             "target": [
-              "a[href=\"tel:+19408820131\"]"
+              "a[href=\"\"]"
             ]
           },
           {
