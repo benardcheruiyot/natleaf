@@ -1050,7 +1050,7 @@
                 "width": 161,
                 "height": 36
               },
-              "snippet": "<a class=\"chatFab\" href=\"https://wa.me/19408820131?text=Hi%2C%20I%20need%20help%20with%20my%20order\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open chat support\">",
+              "snippet": "<a class=\"chatFab\" href=\"\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open chat support\">",
               "nodeLabel": "Need help? Chat with us",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
